@@ -946,6 +946,48 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
+"@goodluck/util-browser@4.1.2":
+  version "4.1.2"
+  resolved "https://npm.goodluckchina.net/@goodluck%2futil-browser/-/util-browser-4.1.2.tgz#df6024cf88a30c980de4485a6d79665c789263ce"
+  integrity sha512-rtDwoVfeD6/F0B2oOuILCoz7C15NJMJJtukbUiIecQv83fRqAsxwSAjnQ7u1dO+9H4ToQTywPz8kQWSbsei8OQ==
+
+"@goodluck/util-common@4.1.2":
+  version "4.1.2"
+  resolved "https://npm.goodluckchina.net/@goodluck%2futil-common/-/util-common-4.1.2.tgz#4a412f7d9b1b9cee4ba636eabf73630b55c28cd4"
+  integrity sha512-0hs/oHFBKC9kTvSL9pkKffHVDt+meY3gVtsblVEjSMNKVJdCdMZdPmkpyQKnhDwqkD/NlvAU3G4wLH7IcwvVvA==
+
+"@goodluck/util-crypto@4.1.2":
+  version "4.1.2"
+  resolved "https://npm.goodluckchina.net/@goodluck%2futil-crypto/-/util-crypto-4.1.2.tgz#98d777578926af57443cffe1434db2412329a308"
+  integrity sha512-gRU25X2jhCKkUc79J3KM+nd23qP+4D8zyduflwXCoMg+By1BY0DnDZDewiSEdFHxbr+eG9iTMBP5KLoaC4EfPQ==
+
+"@goodluck/util-decorator@4.1.2":
+  version "4.1.2"
+  resolved "https://npm.goodluckchina.net/@goodluck%2futil-decorator/-/util-decorator-4.1.2.tgz#4cfbb382322380e6458e3fa177b2fa99b3627bcc"
+  integrity sha512-fPdICUIqAvmVkL7oG8Ajbz53dJuIFiGF8hH7BciYakjAnxfm4bAEltKAFnteedjdekUxGppKQnaiKSXwg5eBag==
+
+"@goodluck/util-network@4.1.2":
+  version "4.1.2"
+  resolved "https://npm.goodluckchina.net/@goodluck%2futil-network/-/util-network-4.1.2.tgz#d4470fbcd52a3b5f06adbe23e4c6f5c886291941"
+  integrity sha512-fGRUIxkLtOh3NlyAOsF6UAsNYLirCayI5uCkGfoKJpreQ+UNMDdHXVFsVPYFHaVSlnU5oXsx8WO0+LOF2jBvHg==
+
+"@goodluck/util-validation@4.1.2":
+  version "4.1.2"
+  resolved "https://npm.goodluckchina.net/@goodluck%2futil-validation/-/util-validation-4.1.2.tgz#f5d692bd69ce27e3f54167d62ae1d22817329df5"
+  integrity sha512-7LLvx9kKIr0RzgK3d/fvH7egIqKiQR9JPw5OtYGMk3J9x7BdN7gbRYq22oWjmsn/7puvcOxk5KhuW4NYLHWQAA==
+
+"@goodluck/util@^4.1.2":
+  version "4.1.2"
+  resolved "https://npm.goodluckchina.net/@goodluck%2futil/-/util-4.1.2.tgz#8338f0a4ba80ad09a1870cc51d654dc034b22c5f"
+  integrity sha512-h4upQUYQ1OjFrAfViOBfTyJmGKf7usvo5SBglcrhrPu7+zLW033M6d/+M0Y3aK+xR9Sok4JHEpgXWQFe9T0SEA==
+  dependencies:
+    "@goodluck/util-browser" "4.1.2"
+    "@goodluck/util-common" "4.1.2"
+    "@goodluck/util-crypto" "4.1.2"
+    "@goodluck/util-decorator" "4.1.2"
+    "@goodluck/util-network" "4.1.2"
+    "@goodluck/util-validation" "4.1.2"
+
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
   resolved "https://npm.goodluckchina.net/@jridgewell%2fgen-mapping/-/gen-mapping-0.1.1.tgz#e5d2e450306a9491e3bd77e323e38d7aff315996"
@@ -1084,6 +1126,11 @@ ansi-styles@^3.2.1:
   integrity sha1-QfuyAkPlCxK+DwS43tvwdSDOhB0=
   dependencies:
     color-convert "^1.9.0"
+
+apng-handler@^0.1.4:
+  version "0.1.4"
+  resolved "https://npm.goodluckchina.net/apng-handler/-/apng-handler-0.1.4.tgz#eba55a89ddc496cdf8ebd698c9ff7ec493e42a86"
+  integrity sha512-7l/ptiXk/w0JX/SF9atWijKov7b0oqsUL7Yzmrlke8tedjqinDtYAK1GD+2Eu+98XkYIuWIhlA8cSQ/aVggS4w==
 
 babel-plugin-polyfill-corejs2@^0.3.3:
   version "0.3.3"
@@ -1404,10 +1451,10 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-libpag@^4.1.40:
-  version "4.1.40"
-  resolved "https://npm.goodluckchina.net/libpag/-/libpag-4.1.40.tgz#25171dbe0a6de46204f722f2bd5c6812a2421aaf"
-  integrity sha512-ged1i0mHbUrY6/UMCXda9fXP+FNmvLsVVhS/b3J+Nq7xLvxM3BRSOQfSLroDQtJ7z29uVbT+cRlkUxXt4aRv8g==
+libpag@^4.1.43:
+  version "4.1.43"
+  resolved "https://npm.goodluckchina.net/libpag/-/libpag-4.1.43.tgz#a10d4057a25c3c9f76bb640eb2e7dc4259f1b251"
+  integrity sha512-odE+ulkJ2uVOpPVBkAxax4QNd9WB+3ewMdej4RHYtu+8K7csTnrtk2XneMnMUaFXwm9evRivveN8HG+wNBlcFQ==
 
 locate-path@^5.0.0:
   version "5.0.0"
