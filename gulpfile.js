@@ -5,7 +5,6 @@ const less = require('gulp-less');
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
 const csso = require('gulp-csso');
-const cheerio = require('gulp-cheerio');
 const inject = require('gulp-inject');
 const jsonmin = require('gulp-jsonmin');
 
@@ -56,9 +55,6 @@ gulp.task('build:html', () => {
 
 gulp.task('replace:html', () => {
     return gulp.src('./dist/*.html')
-    .pipe(cheerio($ => {
-        $("link").remove();
-    }))
     .pipe(inject(gulp.src(['./dist/*.css', './dist/*.js', '!./dist/thumbnail.js']), {
         relative: true,
         removeTags: true,
