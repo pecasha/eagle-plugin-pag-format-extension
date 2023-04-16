@@ -25,3 +25,4 @@ yarn run build # npm run build
 ## 说明
 * 最终编译输出至`/dist/`目录中的文件是可供`Eagle`插件系统本地调试使用的完整文件包。如需发布生成`.eagleplugin`格式的`Eagle 插件包`文件，可先按照 [[调试]](#调试) 中的方式将本地插件导入到`Eagle`中，之后在插件列表中点击`PAG 格式扩展`右侧的`…`，选择`打包插件`即可。
 * 关于插件开发或`Eagle`相关问题，可前往 [Eagle 插件开发群](https://discord.gg/eGFYpRx7x4) 进行交流或反馈。
+* `PAG(Portable Animated Graphics)`格式是腾讯推出的一种适用于`AE(Adobe After Effects)`导出的动效格式，其采用可扩展的二进制文件格式，可以在文件中集成图片、音频，在编解码速度和文件压缩率都有很优秀的表现。具体可以查阅 [PAG官网](https://pag.art/)。
