@@ -6,19 +6,11 @@ import { terser } from "rollup-plugin-terser";
 
 export default [
     {
-        input: "src/index.ts",
+        input: "src/core/index.ts",
         output: [
             {
                 file: "build/core.js",
                 format: "cjs"
-            },
-            {
-                file: "build/index.cjs",
-                format: "cjs"
-            },
-            {
-                file: "build/index.mjs",
-                format: "esm"
             }
         ],
         plugins: [

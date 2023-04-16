@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN" ondragstart="return false">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="no-referrer">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="fragment" content="!">
+    <meta name="author" content="chuck">
+    <title>PAG文件预览</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./viewer.less">
+    <!-- endinject -->
+</head>
+
+<body>
+    <canvas id="pag"></canvas>
+    <div class="progress">
+        <i class="icon-pause"></i>
+        <p><em class="cursor"></em></p>
+        <span class="duration">
+            <em class="duration-current">00:00</em>
+            <small>/</small>
+            <em class="duration-total">00:00</em>
+        </span>
+    </div>
+    <!-- inject:js -->
+    <script src="./viewer.js"></script>
+    <!-- endinject -->
+</body>
+</html>

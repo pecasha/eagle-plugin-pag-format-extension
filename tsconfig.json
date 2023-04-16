@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "module": "esnext",
         "target": "esnext",
         "declaration": true,
         "composite": true,
@@ -15,11 +16,11 @@
             "dom.iterable",
             "esnext"
         ],
-        "rootDir": "./src",
+        "rootDir": "./src/core",
         "outDir": "./build"
     },
     "include": [
-        "src/**/*.ts"
+        "src/core/**/*.ts"
     ],
     "exclude": [
         "node_modules"
