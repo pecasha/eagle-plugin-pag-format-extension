@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const url = require("url");
 const {
     Core,
     THEME_COLOR,
@@ -22,7 +23,7 @@ const theme = urlParams.get("theme");
     document.documentElement.style.setProperty("--theme-ft-color", THEME_COLOR[theme][3]);
 
     const pag = new Core({
-        wasmPath: require("url").pathToFileURL(require("path").resolve(`${__dirname}/lib/pag.wasm`)).href,
+        wasmPath: url.pathToFileURL(path.resolve(`${__dirname}/lib/pag.wasm`)).href,
         canvas: document.querySelector("#pag"),
         devicePixelRatio: window.devicePixelRatio,
     });

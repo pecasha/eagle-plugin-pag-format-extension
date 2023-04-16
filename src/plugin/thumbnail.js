@@ -1,4 +1,6 @@
 const fs = require("fs");
+const path = require("path");
+const url = require("url");
 const { Core } = require("../core/index.ts");
 
 module.exports = async ({ src, dest, item }) => {
@@ -8,7 +10,7 @@ module.exports = async ({ src, dest, item }) => {
             document.body.appendChild(canvas);
 
             const pag = await Core.from({
-                locateFile: () => require("url").pathToFileURL(require("path").resolve(`${__dirname}/lib/pag.wasm`)).href
+                locateFile: () => url.pathToFileURL(path.resolve(`${__dirname}/lib/pag.wasm`)).href
             });
 
             const file = await fs.promises.readFile(src);
