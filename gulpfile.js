@@ -5,12 +5,9 @@ const less = require('gulp-less');
 const htmlmin = require('gulp-htmlmin');
 const uglify = require('gulp-uglify');
 const csso = require('gulp-csso');
-const postcss = require('gulp-postcss');
 const cheerio = require('gulp-cheerio');
 const inject = require('gulp-inject');
 const jsonmin = require('gulp-jsonmin');
-const short = require('postcss-short');
-const cssnext = require('postcss-cssnext');
 
 gulp.task('clean', () => {
     return gulp.src('./dist', {read: false, allowEmpty: true})
@@ -33,22 +30,12 @@ gulp.task('build:js', gulp.series('build:lib', () => {
     .pipe(gulp.dest('./dist'));
 }));
 
-gulp.task('build:css', () => {
-    return gulp.src("./src/plugin/**/*.css")
+gulp.task('build:less', () => {
+    return gulp.src('./src/plugin/**/*.less')
+    .pipe(less())
     .pipe(csso())
     .pipe(gulp.dest('./dist'));
 });
-
-gulp.task('build:less', gulp.series('build:css', () => {
-    return gulp.src('./src/plugin/**/*.less')
-    .pipe(less())
-    .pipe(postcss([
-        short(),
-        cssnext()
-    ]))
-    .pipe(csso())
-    .pipe(gulp.dest('./dist'));
-}));
 
 gulp.task('build:image', () => {
     return gulp.src('./src/plugin/**/*.*(png|jpg|jpeg|gif|svg|webp)')
