@@ -1,11 +1,11 @@
 {
-    "name": "eagle-plugin-pag-preview",
+    "name": "eagle-plugin-pag-format-extension",
     "version": "1.0.0",
     "description": "Eagle PAG文件格式扩展插件",
     "author": "chuck<chuck@chihai.me>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/chihai-chuck/eagle-plugin-pag-preview.git"
+        "url": "https://github.com/chihai-chuck/eagle-plugin-pag-format-extension.git"
     },
     "files": [
         "dist"
