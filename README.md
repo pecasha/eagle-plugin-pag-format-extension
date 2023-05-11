@@ -1,4 +1,4 @@
-# Eagle-Plugin-PAG-Preview
+# Eagle-Plugin-PAG-Format-Extension
 > Eagle PAG文件格式扩展插件
 
 ## 开发
