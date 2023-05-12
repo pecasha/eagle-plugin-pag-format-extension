@@ -31,7 +31,7 @@
         "gulp-less": "^5.0.0",
         "gulp-replace": "^1.1.4",
         "gulp-uglify": "^3.0.2",
-        "rollup": "^3.20.2",
+        "rollup": "^3.21.6",
         "rollup-plugin-terser": "^7.0.2",
         "rollup-plugin-typescript2": "^0.34.1",
         "typescript": "^5.0.4"

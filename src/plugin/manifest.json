@@ -4,7 +4,7 @@
     "platform": "all",
     "arch": "all",
     "name": "PAG 格式扩展",
-    "logo": "/logo.png",
+    "logo": "/logo.jpg",
     "keywords": ["PAG", "Portable Animated Graphics"],
     "devTools": true,
     "preview": {
