@@ -11,7 +11,9 @@
         "dist"
     ],
     "scripts": {
-        "build": "rollup -c --bundleConfigAsCjs & gulp build",
+        "build:test": "npm run bundle",
+        "build:prod": "npm run bundle -- --prod",
+        "bundle": "rollup -c --bundleConfigAsCjs & gulp build",
         "up": "yarn upgrade-interactive --latest"
     },
     "dependencies": {

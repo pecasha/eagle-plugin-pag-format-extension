@@ -1,10 +1,10 @@
 {
-    "id": "LE49WI0G6YDI9",
+    "id": "50323ebd-acd4-491b-bfe9-1da45c630ddc",
     "version": "1.0.0",
     "platform": "all",
     "arch": "all",
     "name": "PAG 格式扩展",
-    "logo": "/logo.jpg",
+    "logo": "/logo.png",
     "keywords": ["PAG", "Portable Animated Graphics"],
     "devTools": true,
     "preview": {
