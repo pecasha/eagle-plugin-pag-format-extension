@@ -3,10 +3,24 @@
     "version": "1.0.0",
     "platform": "all",
     "arch": "all",
-    "name": "PAG 格式扩展",
+    "name": "{{manifest.app.name}}",
     "logo": "/logo.png",
-    "keywords": ["PAG", "Portable Animated Graphics"],
     "devTools": true,
+    "keywords": [
+        "PAG",
+        "Portable Animated Graphics"
+    ],
+    "fallbackLanguage": "zh_CN",
+    "languages": [
+        "de_DE",
+        "en",
+        "es_ES",
+        "ja_JP",
+        "ko_KR",
+        "ru_RU",
+        "zh_CN",
+        "zh_TW"
+    ],
     "preview": {
         "pag": {
             "thumbnail": {
