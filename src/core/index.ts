@@ -16,12 +16,12 @@ export interface Options {
 }
 
 export const THEME_COLOR = {
-    light: ["#f8f9fb", "#e3e5e7", "#a0a1a4", "#323339"],
-    lightgray: ["#e2e4e6", "#c6c8c9", "#8b8d8e", "#191d1e"],
-    gray: ["#353639", "#2a2b2f", "#707173", "#d7d7d7"],
-    dark: ["#242528", "#1d1e21", "#646567", "#d3d3d4"],
-    "dark-blue": ["#343848", "#2a2d3b", "#70737e", "#d6d7da"],
-    purple: ["#393547", "#2e2a3a", "#73707d", "#d7d7da"]
+    light: ["#f8f8f9", "#dfdfe0", "#888a95", "#2c2f32"],
+    lightgray: ["#dddee1", "#c7c7ca", "#6e8086", "#2c2f32"],
+    gray: ["#3b3c40", "#515255", "#94969c", "#f8f9fb"],
+    dark: ["#1f2023", "#363739", "#767b8a", "#f8f9fb"],
+    blue: ["#151d36", "#2c344b", "#40475d", "#f8f9fb"],
+    purple: ["#231b2b", "#393240", "#7a748e", "#f8f9fb"]
 }
 
 export class Core {
