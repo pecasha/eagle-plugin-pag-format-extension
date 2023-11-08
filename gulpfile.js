@@ -7,8 +7,9 @@ const uglify = require('gulp-uglify');
 const csso = require('gulp-csso');
 const inject = require('gulp-inject');
 const jsonmin = require('gulp-jsonmin');
+const jsonEditor = require('gulp-json-editor');
 
-const isProd = process.argv.includes("--prod");
+const isProd = process.title.includes("--prod");
 
 gulp.task('clean', () => {
     return gulp.src('./dist', {
@@ -30,7 +31,11 @@ gulp.task('build:lib', gulp.series('build:core', () => {
 
 gulp.task('build:js', gulp.series('build:lib', () => {
     return gulp.src(['./src/plugin/**/*.js', '!./src/plugin/lib/**/*.js'])
-               .pipe(uglify())
+               .pipe(uglify({
+                   compress: {
+                       drop_debugger: isProd
+                   }
+               }))
                .pipe(gulp.dest('./dist'));
 }));
 
@@ -48,7 +53,6 @@ gulp.task('build:image', () => {
 
 gulp.task('build:json', () => {
     return gulp.src('./src/plugin/**/*.json')
-               .pipe(jsonmin())
                .pipe(gulp.dest('./dist'));
 });
 
@@ -67,7 +71,7 @@ gulp.task('replace:html', () => {
                    removeTags: true,
                    transform: (filePath, file) => {
                        if(filePath.endsWith('.js')){
-                           return `<script>${file.contents}</script>`;
+                           return `<script>window.isDev=${(!isProd).toString()};${file.contents}</script>`;
                        }
                        if(filePath.endsWith('.css')) {
                            return `<style>${file.contents}</style>`;
@@ -80,7 +84,11 @@ gulp.task('replace:html', () => {
 
 gulp.task('replace:manifest', () => {
     return gulp.src('./dist/manifest.json')
-               .pipe(replace('"devTools":true', `"devTools":${(!isProd).toString()}`))
+               .pipe(jsonEditor(json => {
+                   json.devTools = !isProd;
+                   return json;
+               }))
+               .pipe(jsonmin())
                .pipe(gulp.dest('./dist'));
 });
 
