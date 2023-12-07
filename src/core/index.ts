@@ -74,6 +74,19 @@ export class Core {
         });
         this.#pagFile = await this.#pag.PAGFile.load(file);
         this.#duration = this.#pagFile.duration();
+        const width = this.#pagFile.width();
+        const height = this.#pagFile.height();
+        if(width < window.innerWidth && height < window.innerHeight) {
+            this.#options.canvas.width = width;
+            this.#options.canvas.height = height;
+            this.#options.canvas.style.width = `${width}px`;
+            this.#options.canvas.style.height = `${height}px`;
+        } else {
+            this.#options.canvas.width = window.innerWidth;
+            this.#options.canvas.height = window.innerHeight;
+            this.#options.canvas.style.width = "100%";
+            this.#options.canvas.style.height = "100%";
+        }
         this.#onResize();
         this.#pagView = (await this.#pag.PAGView.init(this.#pagFile, this.#options.canvas, {
             useScale: false
@@ -87,7 +100,7 @@ export class Core {
                     clearTimeout(resizeTimer);
                     resizeTimer = 0;
                 }
-                resizeTimer = window.setTimeout(this.#onResize, 300);
+                resizeTimer = window.setTimeout(this.#onResize.bind(this), 300);
             }, false);
         }
         this.#loaded = true;
@@ -107,6 +120,7 @@ export class Core {
         const style = window.getComputedStyle(this.#options.canvas, null);
         this.#options.canvas.width = Number(style.width.replace("px", "")) * this.#options.devicePixelRatio;
         this.#options.canvas.height = Number(style.height.replace("px", "")) * this.#options.devicePixelRatio;
+        console.log(777);
         this.#pagView.updateSize?.();
         this.#pagView.flush?.();
     }
