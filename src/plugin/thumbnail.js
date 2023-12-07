@@ -16,8 +16,11 @@ module.exports = async ({ src, dest, item }) => {
             const file = await fs.promises.readFile(src);
             const pagFile = await pag.PAGFile.load(file.buffer);
 
-            canvas.width = pagFile.width();
-            canvas.height = pagFile.height();
+            const width = pagFile.width();
+            const height = pagFile.height();
+
+            canvas.width = width;
+            canvas.height = height;
 
             const pagView = await pag.PAGView.init(pagFile, canvas, {
                 useScale: false
@@ -44,8 +47,9 @@ module.exports = async ({ src, dest, item }) => {
                 await fs.promises.writeFile(dest, Buffer.from(await blob.arrayBuffer()));
             }
 
-            item.width = canvas.width;
-            item.height = canvas.height;
+            item.duration = pagFile.duration() / 1000000;
+            item.width = width;
+            item.height = height;
             resolve(item);
         } catch (err) {
             reject(err);
