@@ -47,7 +47,7 @@ module.exports = async ({ src, dest, item }) => {
                 await fs.promises.writeFile(dest, Buffer.from(await blob.arrayBuffer()));
             }
 
-            item.duration = pagFile.duration() / 1000000;
+            item.duration = Math.ceil(pagFile.duration() / 1000000);
             item.width = width;
             item.height = height;
             resolve(item);
